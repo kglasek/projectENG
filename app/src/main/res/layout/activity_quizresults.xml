@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_results"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fadesec"
+    tools:context=".quizresults">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:textColor="@color/whit"
+        android:fontFamily="arial"
+        android:layout_margin="16dp"
+        android:id="@+id/grade"
+        android:text="Result"/>
+
+    <TextView
+        android:layout_below="@+id/grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:textColor="@color/whit"
+        android:layout_margin="16dp"
+        android:fontFamily="arial"
+        android:id="@+id/outOf"
+        android:text="You scored 8 out of 9"/>
+
+    <Button
+        android:layout_below="@+id/outOf"
+        android:id="@+id/retry"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Retry Quiz"
+        android:padding="8dp"
+        android:layout_margin="4dp"
+        android:textColor="#fff"
+        android:background="@drawable/transparent_button"
+        android:textSize="18sp"
+        android:fontFamily="arial"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_below="@+id/retry"
+        android:id="@+id/end"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="End Quiz"
+        android:padding="8dp"
+        android:layout_margin="4dp"
+        android:textColor="#fff"
+        android:background="@drawable/transparent_button"
+        android:textSize="18sp"
+        android:fontFamily="arial"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
+

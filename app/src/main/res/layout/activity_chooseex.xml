@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/fadesec"
+    android:layout_height="match_parent"
+    tools:context=".chooseex">
+
+    <Button
+        android:id="@+id/presentsimp"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:background="@drawable/transparent_button"
+        android:text="Wstawianie"
+        android:textColor="@color/whit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/presentcont"
+        android:layout_width="match_parent"
+        android:background="@drawable/transparent_button"
+        android:layout_height="106dp"
+        android:textColor="@color/whit"
+        android:text="Przepisywanie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/presentsimp" />
+
+</android.support.constraint.ConstraintLayout>

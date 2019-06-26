@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">projectENG</string>
+    <string name="title_activity_wyborzadan">wyborzadan</string>
+    <string name="title_activity_zadaniawybor">zadaniawybor</string>
+</resources>
