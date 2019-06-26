@@ -17,6 +17,8 @@ Dokumentacja została wykonana z wykorzystaniem programu Doxygen 1.8.15 oraz Mic
 # Uruchomienie i instalacja:
 Do zainstalowania i uruchomienia aplikacji wymagane są: Android Studio 3.4.1, Emulator Androida lub Telefon z systemem Android w wersji 5.0 Lollipop
 
-# Odnośnik do repozytorium
-
-https://github.com/projektrepo/projektAndroid
+# Odnośniki do repozytorium
+Najnowszy build:
+https://github.com/kglasek/projectENG
+Stary build:
+https://github.com/projektrepo/projectENGb
