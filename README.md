@@ -1,14 +1,15 @@
 # Aplikacja do nauki języka angielskiego
 
 # Opis:
-Projekt na przedmiot "Programowanie aplikacji dla technologii mobilnych"
-Jest to aplikacja dostępna na system Android, która ma za zadanie pomóc w nauce języka angielskiego.
+Projekt na przedmiot "Programowanie aplikacji dla technologii mobilnych" Jest to aplikacja dostępna na system Android, która ma za zadanie pomóc w nauce języka angielskiego.
+Aplikacja wykorzystuje REST API Oxfordu.
 
 # Technologie wykorzystane do stworzenia aplikacji oraz dokumentacji:
 - Android Studio 3.4.1
 - System Android
 - Doxygen 1.8.15
 - Microsoft Word
+- REST API Oxfordu: https://developer.oxforddictionaries.com
 - GitHub
 
 # Dokumentacja:
