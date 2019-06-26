@@ -19,6 +19,7 @@ Do zainstalowania i uruchomienia aplikacji wymagane są: Android Studio 3.4.1, E
 
 # Odnośniki do repozytorium
 Najnowszy build:
-https://github.com/kglasek/projectENG
+- https://github.com/kglasek/projectENG
+
 Stary build:
-https://github.com/projektrepo/projectENGb
+- https://github.com/projektrepo/projectENGb
