@@ -8,8 +8,11 @@ import android.widget.Button;
 /** Klasa sluzaca do wyboru aktywnosci zwiazanych z zadaniami do wypelnienia*/
 public class chooseex extends AppCompatActivity {
 
-    public Button przyciskpress;
-    public Button rewritesent;
+    public Button przyciskpress; /**< przycisk odpowiedzialny za przejście do zadań przez wstawianie*/
+    public Button rewritesent; /**< przycisk odpowiedzialny za przejście do zadań do wypełnienia*/
+    /** \brief  Funkcja służąca do aktywacji przycisków w wyborze zadań do rozwiązania
+     * wyszukuje w przycisk na podstawie ID, i za pomocą intecji po wybraniu przycisku przechodzi do następnej aktywności
+     */
     public void init()
     {
         /*wykorzystana została metoda setOnClickListener, ktora pobiera informacje o nacisnieciu przycisku i przechodzi do nastepnej aktywnosci*/

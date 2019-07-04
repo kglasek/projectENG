@@ -8,10 +8,13 @@ import android.widget.Button;
 /** Klasa glownej aktywnosci sluzy ona jako menu glowne*/
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonone;
-    private Button thirdbutton;
-    private Button fourthbutton;
-    private Button nextButton;
+    private Button buttonone;  /**< przycisk odpowiedzialny za przejście do menu z wyborem aktywnosci zwiazanych z: czasami, zadaniami i fiszkami*/
+    private Button thirdbutton;  /**< przycisk odpowiedzialny za przejście do quizu*/
+    private Button fourthbutton;  /**< przycisk odpowiedzialny za przejście do słownika*/
+    private Button nextButton;  /**< przycisk odpowiedzialny za przejście do tekstu na mowę*/
+    /** \brief  Funkcja służąca do aktywacji przycisków
+     * wyszukuje w przycisk na podstawie ID, i za pomocą intecji po wybraniu przycisku przechodzi do następnej aktywności
+     */
     private void init()
     {
         buttonone=(Button)findViewById(R.id.button);

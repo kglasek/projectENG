@@ -1,7 +1,10 @@
 package com.example.projecteng;
 /** Klasa pomocnicza do klasy i aktywnosci quiz*/
-//tablica stringow przechowyjaca pytania do quizu
+
+
 public class quizquestion {
+    /** \brief  tablice stringów przechowujące pytania i prawidlowe odpowiedzi
+     */
     public static String[] mQuestions =new String [] {
             "What is the name of United Kingdom flag?",
             "What is the capital of England?",
@@ -12,7 +15,7 @@ public class quizquestion {
             "Which band was John Lennon a member of in the 1960s?"
 
     };
-//tablica stringow przechowujaca odpowiedzi do quizu
+
 
     private String mChoices [][] = {
             {"Black Jack", "Union Jack", "United FLag"},
@@ -25,36 +28,48 @@ public class quizquestion {
 
     };
 
-
-
-    //tablica stringow przechowujaca prawidlowe odpowiedzi do pytan
     public String mCorrectAnswers[] = {"Union Jack", "London", "a police officer in London", "Queen Elizabeth II","A bus","a prehistoric monument","The Beatles"};
 
 
-//metody
+    /** \brief Funkcja odpowiedzialna za zwracanie stringów z pytaniami
+     * @param a parametr określający numer pytania w tablicy
+     * @return  zwraca pytanie
+     */
 
     public String getQuestion(int a) {
         String question = mQuestions[a];
         return question;
     }
 
-
+    /** \brief Funkcja odpowiedzialna za zwracanie stringów z wyborami
+     * @param a parametr określający numer dostępnej odpowiedzi w tablicy
+     * @return  zwraca wybor odpowiedzi
+     */
     public String getChoice1(int a) {
         String choice0 = mChoices[a][0];
         return choice0;
     }
-
+    /** \brief Funkcja odpowiedzialna za zwracanie stringów z wyborami
+     * @param a parametr określający numer dostępnej odpowiedzi w tablicy
+     * @return  zwraca wybor odpowiedzi
+     */
 
     public String getChoice2(int a) {
         String choice1 = mChoices[a][1];
         return choice1;
     }
-
+    /** \brief Funkcja odpowiedzialna za zwracanie stringów z wyborami
+     * @param a parametr określający numer dostępnej odpowiedzi w tablicy
+     * @return  zwraca wybor odpowiedzi
+     */
     public String getChoice3(int a) {
         String choice2 = mChoices[a][2];
         return choice2;
     }
-
+    /** \brief Funkcja odpowiedzialna za zwracanie stringów z prawidłową odpowiedzią
+     * @param a parametr określający numer prawidłowej odpowiedzi w tablicy
+     * @return  zwraca prawidłową odpowiedź
+     */
     public String getCorrectAnswer(int a) {
         String answer = mCorrectAnswers[a];
         return answer;

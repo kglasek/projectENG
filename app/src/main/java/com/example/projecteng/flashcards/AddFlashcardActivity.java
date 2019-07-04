@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import com.example.projecteng.R;
 import com.example.projecteng.entity.Flashcard;
-
+/** Klasa odpowiedzialna za dodawanie fiszek*/
 public class AddFlashcardActivity extends AppCompatActivity {
-
+/** \brief pola tekstowe i przycisk*/
     private EditText english;
     private EditText polish;
     private Button submit;
@@ -28,12 +28,15 @@ public class AddFlashcardActivity extends AppCompatActivity {
         this.submit = (Button) findViewById(R.id.submit);
 
         this.submit.setOnClickListener(new View.OnClickListener() {
-
+            /** \brief funckja odpowiedzialna za wstawianie nowych fiszek*/
             @Override
             public void onClick(View v) {
-                String englishWord = english.getText().toString();
-                String polishWord = polish.getText().toString();
-
+                String englishWord = english.getText().toString(); /**< string odpowiedzialny za pole tekstowe które pobiera informacje od użytkownika*/
+                String polishWord = polish.getText().toString(); /**< string odpowiedzialny za pole tekstowe które pobiera informacje od użytkownika*/
+        /** \brief instrukcja warunkowa sprawdzająca prawidłowo wprowadzone dane
+         *  przy błędnie wprowadzonych wyświetla błąd
+         *  przy poprawnych tworzy nową instancje w bazies
+         */
                 if (englishWord.isEmpty() || polishWord.isEmpty()) {
                     TextView errorText = (TextView) findViewById(R.id.error);
                     errorText.setVisibility(View.VISIBLE);

@@ -15,18 +15,18 @@ import com.example.projecteng.entity.Flashcard;
 import java.io.File;
 import java.util.List;
 import java.util.Scanner;
-
+/**klasa odpowiedzialna za fiszki i ich wypisywanie*/
 public class FlashcardsActivity extends AppCompatActivity {
 
     private FlashcardCrud crud;
 
     private ScrollView scrollView;
     private Button addFlashcardButton;
-
+/** \brief ustawienie referencji na instancje*/
     public FlashcardsActivity() {
         this.crud = FlashcardCrud.getInstance();
     }
-
+    /** \brief przeciążona funkcja odpowiedzialna za przycisk odpowiedzialny do dodawania nowych fiszek*/
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +45,7 @@ public class FlashcardsActivity extends AppCompatActivity {
             }
         });
     }
-
+    /** \brief funkcja odpowiedzialna za wypisanie i możliwość przełączania za pomocą przycisku pola tekstowego*/
     public void render() {
         List<Flashcard> flashcards = this.crud.getAll();
         LinearLayout layout = (LinearLayout) this.scrollView.getChildAt(0);

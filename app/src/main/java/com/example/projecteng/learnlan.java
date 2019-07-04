@@ -9,10 +9,12 @@ import com.example.projecteng.flashcards.FlashcardsActivity;
 public class learnlan extends AppCompatActivity {
 
 /** Klasa sluzaca do wyboru aktywnosci zwiazanych z: czasami, zadaniami i fiszkami*/
-    public Button przyciskczasy;
-    public Button przyciskzadania;
-    public Button flashcardsButton;
-    public Button przyciskpostepy;
+    public Button przyciskczasy;   /**< przycisk odpowiedzialny za przejście do czasów w języku angielskim*/
+    public Button przyciskzadania;  /**< przycisk odpowiedzialny za przejście do zadań*/
+    public Button flashcardsButton;  /**< przycisk odpowiedzialny za przejście do fiszek*/
+    /** \brief  Funkcja służąca do aktywacji przycisków
+     * wyszukuje w przycisk na podstawie ID, i za pomocą intecji po wybraniu przycisku przechodzi do następnej aktywności
+     */
     public void init()
     {
         przyciskczasy=(Button)findViewById(R.id.czasy);

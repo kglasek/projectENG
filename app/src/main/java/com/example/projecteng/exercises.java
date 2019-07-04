@@ -18,12 +18,12 @@ public class exercises extends AppCompatActivity {
     TextView t4,t5,t6,t7;;
 
     Button b1;
-    String Str1 = new String("likes");
-    String str2 = new String("hate");
-    String str3 = new String("flies");
-    String str4=new String("do you need");
-    Integer score = new Integer(0);
-    int counter=0;
+    String Str1 = new String("likes"); /**< string zawierający prawidłowe słowo do wstawienia*/
+    String str2 = new String("hate"); /**< string zawierający prawidłowe słowo do wstawienia*/
+    String str3 = new String("flies"); /**< string zawierający prawidłowe słowo do wstawienia*/
+    String str4=new String("do you need"); /**< string zawierający prawidłowe słowo do wstawienia*/
+    Integer score = new Integer(0); /**< integer odpowiedzialny za wypisywanie ilości zdobytych punktów*/
+    int counter=0;  /**< licznik  ustawiony na 0*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,9 @@ public class exercises extends AppCompatActivity {
 
         b1 = (Button)findViewById(R.id.button3);
 
+
+        /** \brief Funkcja odpowiedzialna za możliwość wstawiania wyrazów w puste pola
+         */
         b1.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v) {
@@ -48,9 +51,9 @@ public class exercises extends AppCompatActivity {
                 String content3 = e3.getText().toString();
                 String content4 = e4.getText().toString();
 
-                //w instrukcjach warunkowych sprawdzana jest czy uzytkownik wypelnil poprawnie pole
-                //do sprawdzania poprawnosci wykorzystywana jest funkcja equals(), ktora porownuje czy stringi sa jednakowe
-
+                /** \brief w instrukcjach warunkowych sprawdzana jest czy uzytkownik wypelnil poprawnie pole
+                *do sprawdzania poprawnosci wykorzystywana jest funkcja equals(), ktora porownuje czy stringi sa jednakowe
+*/
                 if (content.trim().equals(Str1)) {
                     t3.setTextColor(Color.GREEN);
                     t3.setText("+1");
@@ -108,7 +111,7 @@ public class exercises extends AppCompatActivity {
                 }
 
             }
-
+/**  \brief funkcja odpowiedzialna za wypisywanie wyniku*/
             private void updatecounter(int point) {
                     t5.setText("" + counter);
 

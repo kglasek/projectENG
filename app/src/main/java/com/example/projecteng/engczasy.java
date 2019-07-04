@@ -25,19 +25,21 @@ import java.io.InputStream;
 
 public class engczasy extends AppCompatActivity {
     TextView simpletext;
-    private Button presentsimple;
-    private Button presentcont;
-    private Button presentperf;
-    private Button pastsimp;
-    private Button pastcont;
-    private Button pastperf;
+    private Button presentsimple; /**< przycisk odpowiedzialny za wybor czasu present simple*/
+    private Button presentcont; /**< przycisk odpowiedzialny za wybor czasu present continous*/
+    private Button presentperf;/**< przycisk odpowiedzialny za wybor czasu present perfect*/
+    private Button pastsimp;/**< przycisk odpowiedzialny za wybor czasu past simple*/
+    private Button pastcont;/**< przycisk odpowiedzialny za wybor czasu past continous*/
+    private Button pastperf;/**< przycisk odpowiedzialny za wybor czasu past perfect*/
 
+    /** \brief Funkcja odpowiedzialna za wyświetlanie tekstu po naciśnięciu przycisku
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_engczasy);
 
-       /*zmapowane przyciski*/
+       /**zmapowane przyciski*/
         presentsimple = (Button)findViewById(R.id.presentsimp);
         simpletext = (TextView) findViewById(R.id.showtext);
         presentcont = (Button)findViewById(R.id.prescont);
@@ -46,7 +48,7 @@ public class engczasy extends AppCompatActivity {
         pastcont=(Button)findViewById(R.id.pastcont);
         pastperf=(Button)findViewById(R.id.pastperf);
 
-        /*do wyboru czasu w jezyku angielskim zostaly uzyte Buttony, ktore przy wyborze zmieniaja wyswietlany tekst
+        /** \brief do wyboru czasu w jezyku angielskim zostaly uzyte Buttony, ktore przy wyborze zmieniaja wyswietlany tekst
         * Uzyta zostala funkcja setOnClickListener do dzialania przycisku*/
         presentsimple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +56,7 @@ public class engczasy extends AppCompatActivity {
                 simpletext.setMovementMethod(new ScrollingMovementMethod());
                 String text="";
                 try{
-                    //za pomoca funkcji InputStream wyciagane sa dane z pliku tekstowego
+                    /** \brief za pomoca funkcji InputStream wyciagane sa dane z pliku tekstowego*/
                     InputStream is = getAssets().open("presentsimp.txt");
                     int size =is.available();
                     byte[] buffer=new byte[size];
@@ -69,9 +71,7 @@ public class engczasy extends AppCompatActivity {
                 simpletext.setText(text);
             }
         });
-
-        //czynnosci dla kazdego przysku sa takie same
-
+/** \brief czynnosci dla kazdego przycisku sa takie same*/
         presentcont.setOnClickListener(new View.OnClickListener() {
 
             @Override

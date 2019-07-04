@@ -10,7 +10,9 @@ import android.widget.TextView;
  * wykorzystuje ona pomocnicza klase quizquestions.java, ktora odpowiada za przechowywanie tablicy stringow z pytaniami i odpowiedziami*/
 
 public class quiz extends AppCompatActivity {
-    private quizquestion qquestion = new quizquestion();
+    /** \brief pola tekstowe i przycisku
+     */
+    private quizquestion qquestion = new quizquestion(); /**< tworzenie obiektu z nowym pytaniem*/
     private TextView mScoreView;
     private TextView mQuestionView;
     private Button mButtonChoice1;
@@ -18,10 +20,12 @@ public class quiz extends AppCompatActivity {
     private Button mButtonChoice3;
     private Button mButtonChoice4;
 
-    private String mAnswer;
-    private int mScore = 0;
-    private int mQuestionNumber = 0;
+    private String mAnswer; /**< string zawierający prawidłową odpowiedź*/
+    private int mScore = 0; /**< licznik punktów ustawiony na 0*/
+    private int mQuestionNumber = 0; /**< licznik pytań ustawiony na 0*/
 
+    /** \brief funkcja odpowiedzialna za tworzenie, wyświetlanie i wybór pytań
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,17 +38,18 @@ public class quiz extends AppCompatActivity {
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonChoice4 = (Button)findViewById(R.id.quit);
 
-        updateQuestion();
+        updateQuestion(); /**< wywołanie funkcji do aktualizacji pytania*/
 
         mButtonChoice1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
 
                 if (mButtonChoice1.getText() == mAnswer){
-                    mScore++;
-                    updateScore(mScore);
+                    mScore++; /**< inkrementuje wynik przy poprawnej odpowiedzi*/
+                    updateScore(mScore); /**< aktualizuje wyświetlany licznik punktów*/
 
-                    //perform check before you update the question
+                    /** \brief sprawdza ilość pytań przed zaktualizowaniem pytania
+                     * jeśli ilość pytań doszła do końca, zostaje dokonane przyjście do ekranu wyników*/
                     if (mQuestionNumber == quizquestion.mQuestions.length) {
                         Intent i = new Intent(quiz.this, quizresults.class);
                         Bundle bundle = new Bundle();
@@ -78,7 +83,8 @@ public class quiz extends AppCompatActivity {
                     mScore++;
                     updateScore(mScore);
 
-                    //perform check before you update the question
+                    /** \brief sprawdza ilość pytań przed zaktualizowaniem pytania
+                     * jeśli ilość pytań doszła do końca, zostaje dokonane przyjście do ekranu wyników*/
                     if (mQuestionNumber == quizquestion.mQuestions.length) {
                         Intent i = new Intent(quiz.this, quizresults.class);
                         Bundle bundle = new Bundle();
@@ -112,7 +118,7 @@ public class quiz extends AppCompatActivity {
                     mScore++;
                     updateScore(mScore);
 
-                    //perform check before you update the question
+                    /** \brief perform check before you update the question*/
                     if (mQuestionNumber == quizquestion.mQuestions.length) {
                         Intent i = new Intent(quiz.this, quizresults.class);
                         Bundle bundle = new Bundle();
@@ -138,6 +144,7 @@ public class quiz extends AppCompatActivity {
                 }
             }
         });
+        /** \brief funckja przenosi po naciśnieciu przycisku od razu do ekranu końcowego*/
         mButtonChoice4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,18 +157,23 @@ public class quiz extends AppCompatActivity {
             }
         });
     }
-
+    /** \brief Funkcja odpowiedzialna za aktualizowanie pytań
+     */
     private void updateQuestion(){
+        /** \brief ustawianie pytania i 3 możliwych odpowiedzi
+         */
         mQuestionView.setText(qquestion.getQuestion(mQuestionNumber));
         mButtonChoice1.setText(qquestion.getChoice1(mQuestionNumber));
         mButtonChoice2.setText(qquestion.getChoice2(mQuestionNumber));
         mButtonChoice3.setText(qquestion.getChoice3(mQuestionNumber));
 
-        mAnswer = qquestion.getCorrectAnswer(mQuestionNumber);
-        mQuestionNumber++;
+        mAnswer = qquestion.getCorrectAnswer(mQuestionNumber);  /**< zmienna pobierajaca prawidłową odpowiedź*/
+        mQuestionNumber++;  /**< inkrementacja pytania*/
     }
 
-
+    /** \brief Funkcja odpowiedzialna za aktualizowanie ilości punktów za prawidłowe odpowiedzi
+     *      * @param point parametr określający ilość punktów
+     */
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);
     }
